@@ -1,5 +1,5 @@
 dog_project/dogImages/*
 dog_project/lfw/*
-dog_projects/__MACOSX/*
-DogVGG16Data.npz_FILES
-bottleneck_features/*
+dog_project/__MACOSX/*
+dog_project/DogVGG16Data.npz_FILES/*
+dog_project/bottleneck_features/*
