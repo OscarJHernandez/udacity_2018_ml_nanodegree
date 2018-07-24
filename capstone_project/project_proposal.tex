@@ -10,7 +10,22 @@
 \section{Domain Background}
 %The project's domain background — the field of research where the project is derived;
 
+
 %Student briefly details background information of the domain from which the project is proposed. Historical information %relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. %Related academic research should be appropriately cited. A discussion of the student's personal motivation for %investigating a particular problem in the domain is encouraged but not required.
+
+A set of data that is indexed by time is known as a time series. They appear in many different fields, such as statistics, physics, finance, economics, biology, or even business. Because of their wide applicability, it is important to generate accurate forecasts of of these time series data. These forecasts are generated using specific mathematical models or algorithms which are trained on a subset of the past values of a given time series. For the purspose of simplifying future discussions, we will adopt the following notation for a time series $X(t)$ or $X_t$
+\begin{equation}
+\lbrace X(t); t=0,1,... \rbrace
+\end{equation}
+
+The most simple model for a time series is the ARIMA 
+
+
+The foreign exchange market 
+
+
+My personal motivation for working on time series is to use it to take advantage of the best exchange rates. As someone who lives abroad in a country that uses a different currency, I often need to transfer money to-and-from my different bank accounts. These transfers are subject to fluctuating currency exchange rates. Without a way to predict what the exchange rate will be for the time of the transfer, I end up loosing money in these tranfers. Therefore, I am interested in developing a way to forecast the exchange rates so that I can minimize the loses during these transfers.   
+
 
 
 \section{Problem Statement}
@@ -18,15 +33,53 @@
 
 % Student clearly describes the problem that is to be solved. The problem is well defined and has at least one relevant potential solution. Additionally, the problem is quantifiable, measurable, and replicable.
 
+
+
+
 \section{Datasets and Inputs}
 %The datasets and inputs — data or inputs being used for the problem;
 
 % The dataset(s) and/or input(s) to be used in the project are thoroughly described. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included. It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
 
+The dataset that we will use is taken from Kaggle [https://www.kaggle.com/meehau/EURUSD/home] 
+Exchange Rate TWI. May 1970 – Aug 1995. [https://datamarket.com/data/set/22tb/exchange-rate-twi-may-1970-aug-1995#!ds=22tb&display=line]
+
+Exchange rate of the Australian Dollar
+[https://datamarket.com/data/set/22wv/exchange-rate-of-australian-dollar-a-for-1-us-dollar-monthly-average-jul-1969-aug-1995#!ds=22wv&display=line]
+
+We will also use some data sets for benchmarking our methods
+
+Sunspot data
+[https://datamarket.com/data/set/22wh/wolfer-sunspot-numbers-1770-to-1869#!ds=22wh&display=line]
+[https://datamarket.com/data/set/22wg/wolfs-sunspot-numbers-1700-1988#!ds=22wg&display=line]
+
+Monthly U.S air passenger miles January 1960 through December 1977, n=216
+https://datamarket.com/data/set/22sj/monthly-us-air-passenger-miles-january-1960-through-december-1977-n216#!ds=22sj&display=line
+
+Mean daily temperature, Fisher River near Dallas, Jan 01, 1988 to Dec 31, 1991
+https://datamarket.com/data/set/235d/mean-daily-temperature-fisher-river-near-dallas-jan-01-1988-to-dec-31-1991#!ds=235d&display=line
+
+Total annual rainfall (in inches), London, England, 1813 – 1912
+https://datamarket.com/data/set/22np/total-annual-rainfall-in-inches-london-england-1813-1912#!ds=22np&display=line
+
+Stock Data
+IBM [https://datamarket.com/data/set/2321/ibm-common-stock-closing-prices-daily-29th-june-1959-to-30th-june-1960-n255#!ds=2321&display=line]
+
+Number of earthquakes per year magnitude 7.0 or greater. 1900-1998
+https://datamarket.com/data/set/22p8/number-of-earthquakes-per-year-magnitude-70-or-greater-1900-1998#!ds=22p8&display=line
+
 \section{Solution Statement}
 %A solution statement — a the solution proposed for the problem given;
 
 % Student clearly describes a solution to the problem. The solution is applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, the solution is quantifiable, measurable, and replicable.
+
+To solve the problem 
+
+https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3
+
+Box Jenkins 
+
+The models that we will use in the problem solution is
 
 
 \section{Benchmark Model}
@@ -34,10 +87,21 @@
 
 % A benchmark model is provided that relates to the domain, problem statement, and intended solution. Ideally, the student's benchmark model provides context for existing methods or known information in the domain and problem given, which can then be objectively compared to the student's solution. The benchmark model is clearly defined and measurable.
 
+For the benchmark model, we will use a simple linear regression model.
+
+
 \section{Evaluation Metrics}
 %A set of evaluation metrics — functional representations for how the solution can be measured;
 
 % Student proposes at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model presented. The evaluation metric(s) proposed are appropriate given the context of the data, the problem statement, and the intended solution.
+
+\begin{align}
+MAE &= \frac{1}{N} \sum_{t=0}^{N}|e_t| \\
+MAPE &= \\
+MSE &= \frac{1}{N} \sum_{t=0}^{N}e^2_t \\
+RMSE &= \\
+U &= 
+\end{align}
 
 
 
@@ -48,11 +112,19 @@
 
 Data preprocessing\\
 Splitting the data\\
-model
+
+
+The models that will be considered are LSTM (Long-short term memory neural network), ANN (artificial neural network), A generative adversarial network along with linear regression models and ARMA models.
 
 
 
 \begin{thebibliography}{9}
+
+\bibitem{Adhikari_2013}
+An Introductory Study on Time Series Modeling and Forecasting
+LAP Lambert Academic Publishing, Germany, 2013
+https://arxiv.org/pdf/1302.6613.pdf
+
 \bibitem{latexcompanion} 
 Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
 \textit{The \LaTeX\ Companion}. 
