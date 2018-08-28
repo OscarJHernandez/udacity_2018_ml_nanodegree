@@ -1,0 +1,209 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+
+%Proposal follows a well-organized structure and would be readily understood by its intended audience. Each section is written in a clear, concise and specific manner. Few grammatical and spelling mistakes are present. All resources used and referenced are properly cited.
+
+\begin{titlepage}
+	\centering
+	\vspace{1cm}
+	{\scshape\Large Udacity 2018: Capstone Project \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Forecasting time series with machine learning\par}
+	\vspace{1.5cm}
+	{\large\bfseries with applications to currency exchange rates \par}
+	\vspace{2cm}
+	{\Large\itshape Author: Oscar Javier Hernandez\par}
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+\section{Definition}
+%(approx. 1-2 pages)
+\subsection{Project Overview}
+%In this section, look to provide a high-level overview of the project in layman’s terms. Questions to ask yourself when writing this section:
+%
+%Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?
+%Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?
+A set of data that is indexed by time is known as a time series. They appear in many different fields, such as statistics, physics, finance, economics, biology, or even business \cite{Adhikari_2013}. Because of their wide applicability, it is important to generate accurate forecasts of time series data. These forecasts are generated using specific mathematical models or algorithms which are trained on a subset of the past values of a given time series. For the purpose of simplifying future discussions, we will adopt the following notation for a time series, denoted $X(t)$ or $X_t$, as
+\begin{equation}
+\lbrace X(t); t=0,1,... \rbrace.
+\end{equation}
+Where $t$ denotes the time-index of the series. One of the simplest models for a time series is the ARIMA (Auto regressive integrated moving average) model. This model is denoted as ARIMA$(p,q,d)$, and assumes that the time series $X_t$ has the form
+\begin{equation}
+X_{t} = \mu +\epsilon_t+ \sum_{i=1}^p \phi_i L^i \left[ (1-L)^d \right] X_{t-i} + \sum_{j=1}^q \theta_j \epsilon_{t-j},
+\end{equation}  
+where $\lbrace \phi_i | i=1,...,p \rbrace$, $\lbrace \theta_i | i=1,...,q \rbrace$ are model parameters and $L$ is the lag operator defined as $L X_t = X_{t-1} $. The term $\epsilon_{t}$ denotes the error terms, assumed to be independent, identically distributed random variables sampled from a zero-mean, normal distribution. The value $\mu$ denotes the average of this model. ARIMA models can be applied to make forecasts of stationary time series ( defined as a time series whose mean, variance and auto correlation does not change over time), or to a time series that can be transformed into a stationary time series. However, there are other state-of-the-art machine learning methods that can be used to model time series methods. Which will the main goal of this project.
+%[https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc442.htm]
+
+One important type of financial time series is the exchange rate between different currencies (Fig.~\ref{fig:EURUSD example}). An exchange rate, is the rate at which one currency will be exchanged for another. There are many factors that can influence this rate, such as balance of payments, interest rate levels, inflation levels and other economical factors which are beyond the scope of this project \cite{Patel_2014}.
+
+
+
+
+
+\subsection{Project Statement}
+%In this section, you will want to clearly define the problem that you are trying to solve, including the strategy (outline of tasks) you will use to achieve the desired solution. You should also thoroughly discuss what the intended solution will be for this problem. Questions to ask yourself when writing this section:
+%
+%Is the problem statement clearly defined? Will the reader understand what you are expecting to solve?
+%Have you thoroughly discussed how you will attempt to solve the problem?
+%Is an anticipated solution clearly defined? Will the reader understand what results you are looking for?
+
+\subsection{Metrics}
+%In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
+%
+%Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?
+%Have you provided reasonable justification for the metrics chosen based on the problem and solution?
+
+\section{Analysis}
+%(approx. 2-4 pages)
+
+\subsection{Data Exploration}
+%In this section, you will be expected to analyze the data you are using for the problem. This data can either be in the form of a dataset (or datasets), input data (or input files), or even an environment. The type of data should be thoroughly described and, if possible, have basic statistics and information presented (such as discussion of input features or defining characteristics about the input or environment). Any abnormalities or interesting qualities about the data that may need to be addressed have been identified (such as features that need to be transformed or the possibility of outliers). Questions to ask yourself when writing this section:
+%
+%If a dataset is present for this problem, have you thoroughly discussed certain features about the dataset? Has a data sample been provided to the reader?
+%If a dataset is present for this problem, are statistics about the dataset calculated and reported? Have any relevant results from this calculation been discussed?
+%If a dataset is not present for this problem, has discussion been made about the input space or input data for your problem?
+%Are there any abnormalities or characteristics about the input space or dataset that need to be addressed? (categorical variables, missing values, outliers, etc.)
+
+
+\subsection{Exploratory Visualization}
+%In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
+%
+%Have you visualized a relevant characteristic or feature about the dataset or input data?
+%Is the visualization thoroughly analyzed and discussed?
+%If a plot is provided, are the axes, title, and datum clearly defined?
+%
+
+\subsection{Algorithms and Techniques}
+%In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
+%
+%Are the algorithms you will use, including any default variables/parameters in the project clearly defined?
+%Are the techniques to be used thoroughly discussed and justified?
+%Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?
+
+\subsection{Benchmark}
+
+%In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
+%
+%Has some result or value been provided that acts as a benchmark for measuring performance?
+%Is it clear how this result or value was obtained (whether by data or by hypothesis)?
+%
+
+
+%
+\section{Methodology}
+%(approx. 3-5 pages)
+%
+\subsection{Data Preprocessing}
+%In this section, all of your preprocessing steps will need to be clearly documented, if any were necessary. From the previous section, any of the abnormalities or characteristics that you identified about the dataset will be addressed and corrected here. Questions to ask yourself when writing this section:
+%
+%If the algorithms chosen require preprocessing steps like feature selection or feature transformations, have they been properly documented?
+%Based on the Data Exploration section, if there were abnormalities or characteristics that needed to be addressed, have they been properly corrected?
+%If no preprocessing is needed, has it been made clear why?
+%Implementation
+%In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
+%
+%Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?
+%Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?
+%Was there any part of the coding process (e.g., writing complicated functions) that should be documented?
+%Refinement
+%In this section, you will need to discuss the process of improvement you made upon the algorithms and techniques you used in your implementation. For example, adjusting parameters for certain models to acquire improved solutions would fall under the refinement category. Your initial and final solutions should be reported, as well as any significant intermediate results as necessary. Questions to ask yourself when writing this section:
+%
+%Has an initial solution been found and clearly reported?
+%Is the process of improvement clearly documented, such as what techniques were used?
+%Are intermediate and final solutions clearly reported as the process is improved?
+
+\section{Results}
+%(approx. 2-3 pages)
+%
+\subsection{Model Evaluation and Validation}
+%In this section, the final model and any supporting qualities should be evaluated in detail. It should be clear how the final model was derived and why this model was chosen. In addition, some type of analysis should be used to validate the robustness of this model and its solution, such as manipulating the input data or environment to see how the model’s solution is affected (this is called sensitivity analysis). Questions to ask yourself when writing this section:
+%
+%Is the final model reasonable and aligning with solution expectations? Are the final parameters of the model appropriate?
+%Has the final model been tested with various inputs to evaluate whether the model generalizes well to unseen data?
+%Is the model robust enough for the problem? Do small perturbations (changes) in training data or the input space greatly affect the results?
+%Can results found from the model be trusted?
+
+\subsection{Justification}
+%In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:
+%
+%Are the final results found stronger than the benchmark result reported earlier?
+%Have you thoroughly analyzed and discussed the final solution?
+%Is the final solution significant enough to have solved the problem?
+
+
+\section{Conclusion}
+%(approx. 1-2 pages)
+%
+\subsection{Free-Form Visualization}
+%In this section, you will need to provide some form of visualization that emphasizes an important quality about the project. It is much more free-form, but should reasonably support a significant result or characteristic about the problem that you want to discuss. Questions to ask yourself when writing this section:
+%
+%Have you visualized a relevant or important quality about the problem, dataset, input data, or results?
+%Is the visualization thoroughly analyzed and discussed?
+%If a plot is provided, are the axes, title, and datum clearly defined?
+
+\subsection{Reflection}
+%In this section, you will summarize the entire end-to-end problem solution and discuss one or two particular aspects of the project you found interesting or difficult. You are expected to reflect on the project as a whole to show that you have a firm understanding of the entire process employed in your work. Questions to ask yourself when writing this section:
+%
+%Have you thoroughly summarized the entire process you used for this project?
+%Were there any interesting aspects of the project?
+%Were there any difficult aspects of the project?
+%Does the final model and solution fit your expectations for the problem, and should it be used in a general setting to solve these types of problems?
+
+\subsection{Improvement}
+%In this section, you will need to provide discussion as to how one aspect of the implementation you designed could be improved. As an example, consider ways your implementation can be made more general, and what would need to be modified. You do not need to make this improvement, but the potential solutions resulting from these changes are considered and compared/contrasted to your current solution. Questions to ask yourself when writing this section:
+%
+%Are there further improvements that could be made on the algorithms or techniques you used in this project?
+%Were there algorithms or techniques you researched that you did not know how to implement, but would consider using if you knew how?
+%If you used your final solution as the new benchmark, do you think an even better solution exists?
+
+
+
+
+%Before submitting, ask yourself. . .
+%
+%Does the project report you’ve written follow a well-organized structure similar to that of the project template?
+%Is each section (particularly Analysis and Methodology) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
+%Would the intended audience of your project be able to understand your analysis, methods, and results?
+%Have you properly proof-read your project report to assure there are minimal grammatical and spelling mistakes?
+%Are all the resources used for this project correctly cited and referenced?
+%Is the code that implements your solution easily readable and properly commented?
+%Does the code execute without error and produce results similar to those reported?
+
+
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Adhikari_2013}
+R. Adhikari and R. K. Agrawal, An Introductory Study on Time Series Modeling and Forecasting, 2013, [arXiv:1302.6613] \url{https://arxiv.org/abs/1302.6613}.
+
+\bibitem{Mong_2016}
+Research Journal of Finance and Accounting www.iiste.org
+ISSN 2222-1697 (Paper) ISSN 2222-2847 (Online)
+Vol.7, No.12, 2016 \url{http://iiste.org/Journals/index.php/RJFA/article/viewFile/31511/32351}.
+
+\bibitem{Patel_2014} P. J. Patel,  N. J. Patel and A. R. Patel, IJAIEM 3, 3, 2014. \url{http://www.ijaiem.org/volume3issue3/IJAIEM-2014-03-05-013.pdf}
+
+\bibitem{Oancea_2014} B. Oancea, S. Cristian Ciucu, Proceedings of the CKS 2013, [arXiv:1401.1333] \url{https://arxiv.org/abs/1401.1333}.
+
+\bibitem{Chaudhuri_2016} T. D. Chaudhuri and I. Ghosh,	Journal of Insurance and Financial Management, Vol. 1, Issue 5, PP. 92-123, 2016,  [arXiv:1607.02093] \url{https://arxiv.org/abs/1607.02093}.
+
+\bibitem{Pant_2018} Pant, N. (2017, September 07). A Guide For Time Series Prediction Using Recurrent Neural Networks (LSTMs). Retrieved from \url{https://blog.statsbot.co/time-series-prediction-using-recurrent-neural-networks-lstms-807fa6ca7f}.
+
+
+\bibitem{Vincent_2018} Vincent, T. (2018). ARIMA Time Series Data Forecasting and Visualization in Python | DigitalOcean. [online] digitalocean.com. Available at: \url{https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3} [Accessed 29 Jul. 2018].
+
+\bibitem{Esteban_2017} C. Esteban, S. L. Hyland and G R\"{a}tsch, \url{https://github.com/ratschlab/RGAN} [arXiv:1706.02633]. 
+
+\end{thebibliography}
+\end{document}
