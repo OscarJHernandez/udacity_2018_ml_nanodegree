@@ -137,11 +137,11 @@ def fit_ARIMAX(pMax,dMax,qMax,train_data,test_data,minimize="RMS"):
 	if(minimize=='RMS'):
 		min_value = min(RMS)
 		min_index = RMS.index(min(RMS))
-		print('The smallest RMS is {} for model ARMA{}'.format(min_value, ARMA_model[min_index][0]))
+		print('The smallest RMS is {} for model ARIMA{}'.format(min_value, ARMA_model[min_index][0]))
 	elif(minimize=='AIC'):
 		min_value = min(AIC)
 		min_index = AIC.index(min(AIC))
-		print('The smallest AIC is {} for model ARMA{}'.format(min_value, ARMA_model[min_index][0]))
+		print('The smallest AIC is {} for model ARIMA{}'.format(min_value, ARMA_model[min_index][0]))
 
 	
 	results = statsmodels.tsa.arima_model.ARIMA(train_data, ARMA_model[min_index][0]).fit(disp=False)
