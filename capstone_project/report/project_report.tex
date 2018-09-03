@@ -503,7 +503,17 @@ _________________________________________________________________
 %Has the final model been tested with various inputs to evaluate whether the model generalizes well to unseen data?
 %Is the model robust enough for the problem? Do small perturbations (changes) in training data or the input space greatly affect the results?
 %Can results found from the model be trusted?
-Having implemented the feed forward and LSTM networks in Keras as described in Sec.~\ref{section: Fitting NN} we fit the model and generate the time series predictions $\lbrace F_t \rbrace$ 
+Having implemented the feed forward and LSTM networks in Keras as described in Sec.~\ref{section: Fitting NN} we fit the model and generate the time series predictions $\lbrace F_t \rbrace$. One issue that we had using this model was that the predictions of the neural networks do not produce any uncertainties. To try to gauge the uncertainties of the model, we do the following procedure \\
+\begin{enumerate}
+\item Train the model using the set $X_{T,{\rm Train}}$
+\item Using the training data, calculate the predictions $F_{T,{\rm Train}}$
+\item Compute the mean squared error (RMSE), and the standard deviation $\sigma_{\rm RMS}$ between the training set $X_{T,{\rm Train}}$ and the prediction on the training set $F_T$.
+\item We generate the perturbation, $\delta X_{T}$, assumed to be a Gaussian random variable sampled from the distribution $\delta X_{T} \in \mathcal{N}(\frac{1}{2}{\rm RMS},\frac{1}{2}\sigma_{\rm RMS} )$
+\item We add the perturbation to the test data $X_T +\delta X_{T}$ and generate predictions on the testing set, $F_{T,{\rm Test}}$.
+\item We repeat this process many times, until we generate a distribution of Forecasts. This distribution will the estimated uncertainty of the neural network predictions.
+\end{enumerate}
+Using this procedure, we generated the uncertainty bands in Figs.~\ref{fig:results Airline},\ref{fig:results sunspots},\ref{fig:results EURO_USD}.
+
 
 \begin{figure}[h]
 \centering
@@ -511,16 +521,16 @@ Having implemented the feed forward and LSTM networks in Keras as described in S
   \centering
   \includegraphics[scale=0.41]{Airline_Passengers_NN.pdf}
   \caption{NN results}
-  \label{fig:sub1}
+  \label{fig:NN results Airline}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[scale=0.41]{Airline_Passengers_LSTN.pdf}
   \caption{LSTM results}
-  \label{fig:sub2}
+  \label{fig:LSTM results Airline}
 \end{subfigure}
-\caption{A figure with two subfigures}
-\label{fig:test}
+\caption{(a) The predictions with uncertainty of the feed forward neural network model. (b) The predictions with uncertainty of the LSTM model. }
+\label{fig:results Airline}
 \end{figure}
 
 \newpage
@@ -530,16 +540,16 @@ Having implemented the feed forward and LSTM networks in Keras as described in S
   \centering
   \includegraphics[scale=0.41]{Sunspot_Forecast_NN.pdf}
   \caption{NN results}
-  \label{fig:sub1}
+  \label{fig:NN results sunspots}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[scale=0.41]{Sunspot_Forecast_LSTN.pdf}
   \caption{LSTM results}
-  \label{fig:sub2}
+  \label{fig:LSTM results sunspots}
 \end{subfigure}
-\caption{A figure with two subfigures}
-\label{fig:test}
+\caption{(a) The predictions with uncertainty of the feed forward neural network model. (b) The predictions with uncertainty of the LSTM model.}
+\label{fig:results sunspots}
 \end{figure}
 
 
@@ -549,16 +559,16 @@ Having implemented the feed forward and LSTM networks in Keras as described in S
   \centering
   \includegraphics[scale=0.41]{EURO_USD_exchange_rate_NN.pdf}
   \caption{NN results}
-  \label{fig:sub1}
+  \label{fig:NN results EURO_USD}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[scale=0.41]{EURO_USD_exchange_rate_LSTN.pdf}
   \caption{LSTM results}
-  \label{fig:sub2}
+  \label{fig:LSTM results EURO_USD}
 \end{subfigure}
-\caption{A figure with two subfigures}
-\label{fig:test}
+\caption{(a) The predictions with uncertainty of the feed forward neural network model. (b) The predictions with uncertainty of the LSTM model.}
+\label{fig:results EURO_USD}
 \end{figure}
 
 
@@ -607,7 +617,14 @@ Data Set & Model & MSE & RMSE \\ \hline
 %Were there any interesting aspects of the project?
 %Were there any difficult aspects of the project?
 %Does the final model and solution fit your expectations for the problem, and should it be used in a general setting to solve these types of problems?
-Through this project, we have 
+In this project we have taken data for time series data $(t,X_t)$ and we have trained two neural network models, the feed forward neural network and the Long-short term memory network, denoted as $G_{\rm FFNN}$ ,$G_{\rm LSTM}$ respectively; to generate a prediction of the future series given the value of the time series at the previous time step. In other words, we have generated a function $G$ such that
+\begin{equation}
+G(X_{t}) = F_{t+1}
+\end{equation}
+where $F_{t+1}$ should be similar to $X_{t+1}$ of the actual time series data. 
+
+This problem was very interesting to me as it 
+ 
 
 \subsection{Improvement}
 %In this section, you will need to provide discussion as to how one aspect of the implementation you designed could be improved. As an example, consider ways your implementation can be made more general, and what would need to be modified. You do not need to make this improvement, but the potential solutions resulting from these changes are considered and compared/contrasted to your current solution. Questions to ask yourself when writing this section:
@@ -616,7 +633,7 @@ Through this project, we have
 %Were there algorithms or techniques you researched that you did not know how to implement, but would consider using if you knew how?
 %If you used your final solution as the new benchmark, do you think an even better solution exists?
 
-While we have obtained interesting results using the machine learning approach, in the future we would like to implement a generative artificial neural network.
+There are some further improvements that we could have carried out to the implemented models, such as an in-depth exploration of different neural network architectures. Adding more dense nodes or adding more layers would have been interesting to explore. However I ran out of time before I could carry out such a study. In the future I would also like to implement a generative adversarial artificial neural network for times series prediction. Unfortunately, I ran out of the time needed to understand and implement this model, but it seemed quite interesting and powerful. I will try to extend my project in the future to do this.
 
 
 %Before submitting, ask yourself. . .
