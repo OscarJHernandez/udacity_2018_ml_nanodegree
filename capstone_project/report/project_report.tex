@@ -250,7 +250,7 @@ Neural networks for time series models have been explored in the literature  \ci
 \centering
 \end{center}
 \end{figure}
-In this diagram, ${X_{t-1},X_{t}}$ is the time series pair that is fed into the neural network, $A(x)$ is the activation function of the network, $b$ is the bias parameter, and $F_{t}$ is the forecast of the model.
+In this diagram, ${X_{t-1},X_{t}}$ is the time series pair that is fed into the neural network, ${\rm RELU}(x)$ is the rectified linear unit activation function of the network, $b$ is the bias parameter, and $F_{t}$ is the forecast of the model.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.4]{Neural_net_schematic_LSTM.pdf}
@@ -597,22 +597,23 @@ In all three cases, we have that the FFNN and LSTM models outperformed the basel
 %Have you visualized a relevant or important quality about the problem, dataset, input data, or results?
 %Is the visualization thoroughly analyzed and discussed?
 %If a plot is provided, are the axes, title, and datum clearly defined?
+One very interesting aspect of this project that I did not have time to explore in more detail was to use different activation functions to test the quality of the generated models. In this project I presented results for the feed forward neural network with a rectified linear unit for the activation function, however, this model seemed to do very poorly for some time series. One such case was the `` Annual rainfall in London (in inches)'' data set shown in the figures below. When I first looked at this data set, I tried to fit it using the methods that I described in this project, but I found that I only got very poor results, pictured in Fig.~\ref{fig:FFNN relu results rainfall}. I tried increasing the training set, but it did not fix the model. However, when I tried changing the activation function from RELU to a linear activation, I was able to generate the model in Figure \ref{fig:FFNN linear results rainfall}, which reproduces the data very well. This indicates to me that depending on the nature of the time series, different activation functions may be more suitable at generating predictions. I think a thorough study of the using different activation functions for all the data sets would be a very interesting extension of the project.   
 \begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.41]{Annual_Rainfall_NN_linear.pdf}
-  \caption{FFNN with linear activation}
-  \label{fig:NN results EURO_USD}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
   \includegraphics[scale=0.41]{Annual_Rainfall_NN_relu.pdf}
   \caption{FFNN with RELU activation}
-  \label{fig:LSTM results EURO_USD}
+  \label{fig:FFNN relu results rainfall}
 \end{subfigure}
-\caption{(a) The predictions with uncertainty of the FFNN model with linear activation function. (b) The predictions with uncertainty of the FFNN model with RELU activation.}
-\label{fig:results EURO_USD}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.41]{Annual_Rainfall_NN_linear.pdf}
+  \caption{FFNN with linear activation}
+  \label{fig:FFNN linear results rainfall}
+\end{subfigure}%
+\caption{(a) The predictions with uncertainty of the FFNN model with a RELU activation function; and (b) the predictions with uncertainty of the FFNN model with a linear activation function. }
+\label{fig:results FNN rainfall}
 \end{figure}
 
 
