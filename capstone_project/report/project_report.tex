@@ -369,6 +369,27 @@ def invert_scaling(y_vec_scaled,ymin,ymax):
         y_vec[k] = ymin+(ymax-ymin)*y_vec_scaled[k]
     return y_vec
 \end{lstlisting}
+In order to train the neural network models, we used the following arrays as our feature matrix $X$ and the training data $y$
+\begin{align}
+X_{\rm Train} &= [{X_{1},X_2,X_3, ..., X_T}], \\
+y_{\rm Train} &= [{X_{2},X_3,X_4, ..., X_{T+1}}].
+\end{align}
+In order to generate these two arrays we used the following function
+\begin{lstlisting}
+def future_data(data,lags=1,future=1):
+    '''
+    This function, takes in the time series [X_t] and returns the array
+    X=[X_{t}]
+    Y=[X_{t+1}]
+    '''
+    
+    X, y = [], []
+    for row in range(len(data) - lags - future):
+        a = data[row:(row + lags), 0]
+        X.append(a)
+        y.append(data[row + lags+future-1, 0])
+    return np.array(X), np.array(y)
+\end{lstlisting}
 Another data prepossessing step that we carried out was to separate out the data into training vs testing data sets. The usual amount of training vs testing was about 60-80$\%$ for training and 30-40$\%$ testing.
 
 
@@ -597,22 +618,11 @@ In all three cases, we have that the FFNN and LSTM models outperformed the basel
 %Have you visualized a relevant or important quality about the problem, dataset, input data, or results?
 %Is the visualization thoroughly analyzed and discussed?
 %If a plot is provided, are the axes, title, and datum clearly defined?
-One very interesting aspect of this project that I did not have time to explore in more detail was to use different activation functions to test the quality of the generated models. In this project I presented results for the feed forward neural network with a rectified linear unit for the activation function, however, this model seemed to do very poorly for some time series. One such case was the `` Annual rainfall in London (in inches)'' data set shown in the figures below. When I first looked at this data set, I tried to fit it using the methods that I described in this project, but I found that I only got very poor results, pictured in Fig.~\ref{fig:FFNN relu results rainfall}. I tried increasing the training set, but it did not fix the model. However, when I tried changing the activation function from RELU to a linear activation, I was able to generate the model in Figure \ref{fig:FFNN linear results rainfall}, which reproduces the data very well. This indicates to me that depending on the nature of the time series, different activation functions may be more suitable at generating predictions. I think a thorough study of the using different activation functions for all the data sets would be a very interesting extension of the project.   
+While we had a good amount of success in making models for the time series we considered, it is important to note that not all time series can be tackled using the neural network architectures in this project. There were cases where good fits did not seem to be possible, like the ``Annual rainfall in London (in inches)'' data set shown in the figure below. When I first looked at this data set, I tried to fit it using the methods that I described in this project, but I obtained very poor results, as pictured in Fig.~\ref{fig:results FNN rainfall}. I tried increasing the training set, changing the activation functions, adding more nodes, but it did not fix the quality of the prediction. It would be very interesting in the future to investigate why this type of time series did not produce good results.
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[scale=0.41]{Annual_Rainfall_NN_relu.pdf}
-  \caption{FFNN with RELU activation}
-  \label{fig:FFNN relu results rainfall}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[scale=0.41]{Annual_Rainfall_NN_linear.pdf}
-  \caption{FFNN with linear activation}
-  \label{fig:FFNN linear results rainfall}
-\end{subfigure}%
-\caption{(a) The predictions with uncertainty of the FFNN model with a RELU activation function; and (b) the predictions with uncertainty of the FFNN model with a linear activation function. }
+\includegraphics[scale=0.41]{Annual_Rainfall_NN_relu.pdf}
+\caption{The predictions with uncertainty of the FFNN model with a RELU activation function.}
 \label{fig:results FNN rainfall}
 \end{figure}
 
@@ -630,7 +640,7 @@ In this project we have taken data for time series data $(t,X_t)$ and we have tr
 \begin{equation}
 G(X_{t}) = F_{t+1}
 \end{equation}
-where $F_{t+1}$ should be similar to the $X_{t+1}$ value of the underlying time series data. This problem was very interesting to me as it introduced me to how complicated and difficult time-series analysis can be, the body of literature that studies this subject is large, so it was great to be able to learn a little about it. The project had some challenges, mainly in getting started and in trying to understand the different approaches to time series modeling. The final model worked better than I expected and it is worth investigating in a more rigorous fashion. The fact that the FFNN and LSTM models outperformed the baseline by such a large margin suggests that perhaps the model was over-fitting. In the future, I would like to carry out more stringent tests to check against over-fitting.
+where $F_{t+1}$ should be similar to the $X_{t+1}$ value of the underlying time series data. This problem was very interesting to me as it introduced me to how complicated and difficult time-series analysis can be, the body of literature that studies this subject is large, so it was great to be able to learn a little about it. The project had some challenges, mainly in getting started and in trying to understand the different approaches to time series modeling. The final model worked better than I expected and it is worth investigating in a more rigorous fashion. The fact that the FFNN and LSTM models outperformed the baseline by such a large margin for the EUR/USD exchange rate data suggests that perhaps the model was over-fitting. In the future, I would like to carry out more stringent tests to check against the over-fitting hypothesis.
  
 
 \subsection{Improvements}
