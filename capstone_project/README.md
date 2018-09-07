@@ -8,7 +8,19 @@ project are below.
 * [The write up of the final project: final_project_write_up.pdf](final_project_write_up.pdf) 
 
 The enviroments needed to run the program can be installed from the requirements.txt in anaconda using the following command:   
-$ conda create --name <env> --file requirements.txt
+$ conda create --name <env> --file requirements.txt  
+
+# Project Summary
+
+In this project we have taken data for time series data $(t,X_t)$ and we have trained two different neural network models,
+ the feed forward neural network (FFNN) and the long-short term memory (LSTM) network, denoted as
+  $G_{\rm FFNN}$ ,$G_{\rm LSTM}$ respectively; to generate a time series forecast given the value of the time series
+   at the previous time step. In other words, we have generated a function $G$ such that  
+$G(X_{t}) = F_{t+1}$  
+where $F_{t+1}$ is similar to the $X_{t+1}$ value of the underlying time series data. 
+This problem was very interesting to me as it introduced me the complexity of time-series analysis.   
+
+![alt text](sunspot_FFNN.png "The FFNN forecast on the sunspot data set")
 
 # Included Code
 1. [Benchmark ARIMA Results](Benchmark_ARIMA_Results.ipynb)
