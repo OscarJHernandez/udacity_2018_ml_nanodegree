@@ -21,6 +21,7 @@ where $F_{t+1}$ is similar to the $X_{t+1}$ value of the underlying time series 
 This problem was very interesting to me as it introduced me the complexity of time-series analysis.   
 
 ![alt text](sunspot_FFNN.png "The FFNN forecast on the sunspot data set")
+<img src="sunspot_FFNN.png"  width="120" height="120">
 
 # Included Code
 1. [Benchmark ARIMA Results](Benchmark_ARIMA_Results.ipynb)
