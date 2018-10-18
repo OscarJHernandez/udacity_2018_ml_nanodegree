@@ -66,7 +66,7 @@ A set of data that is indexed by time is known as a time series. They appear in 
 \end{equation}
 Where $t$ denotes the time-index of the series. One of the simplest models for a time series is the ARIMA (Auto regressive integrated moving average) model. This model is denoted as ARIMA$(p,d,q)$ assumes that the time series $X_t$ has the form
 \begin{equation}
-X_{t} = \mu +\epsilon_t+ \sum_{i=1}^p \phi_i L^i \left[ (1-L)^d \right] X_{t-i} + \sum_{j=1}^q \theta_j \epsilon_{t-j},
+X_{t} = \mu +\epsilon_t+ \sum_{i=1}^p \phi_i L^i \left[ (1-L)^d \right] X_{t} + \sum_{j=1}^q \theta_j \epsilon_{t-j},
 \end{equation}  
 where $\lbrace \phi_i | i=1,...,p \rbrace$, $\lbrace \theta_i | i=1,...,q \rbrace$ are model parameters and $L$ is the lag operator defined as $L X_t = X_{t-1} $. The parameter $p$, is known as the auto-regressive (${\rm AR}$) order, $d$ is the differencing order, and $q$ is the moving average parameter (MA). 
 

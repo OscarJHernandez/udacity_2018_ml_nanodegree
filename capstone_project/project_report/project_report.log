@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.25)  6 SEP 2018 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  18 OCT 2018 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **project_report.tex
 (./project_report.tex
 LaTeX2e <2017-04-15>
-Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -342,7 +342,7 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -428,13 +428,13 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -458,7 +458,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -494,7 +494,7 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count100
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -503,42 +503,41 @@ Now handling font encoding PD1 ...
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4498.
-Package hyperref Info: Link nesting OFF on input line 4503.
-Package hyperref Info: Hyper index ON on input line 4506.
-Package hyperref Info: Plain pages OFF on input line 4513.
-Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4751.
+Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count102
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5104.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen115
 \Fld@menulength=\count103
 \Field@Width=\dimen116
 \Fld@charsize=\dimen117
-Package hyperref Info: Hyper figures OFF on input line 6358.
-Package hyperref Info: Link nesting OFF on input line 6363.
-Package hyperref Info: Hyper index ON on input line 6366.
-Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
-Package hyperref Info: Link coloring with OCG OFF on input line 6383.
-Package hyperref Info: PDF/A mode OFF on input line 6388.
-LaTeX Info: Redefining \ref on input line 6428.
-LaTeX Info: Redefining \pageref on input line 6432.
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
 \Hy@abspage=\count104
 \c@Item=\count105
 \c@Hfootnote=\count106
 )
-
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 \Fld@listcount=\count107
 \c@bookmark@seq@number=\count108
 
@@ -689,13 +688,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<EURO_USD_exchange_rate.pdf, id=95, pagebox=cropbox, 433.62pt x 289.08pt>
+<EURO_USD_exchange_rate.pdf, id=95, 433.62pt x 289.08pt>
 File: EURO_USD_exchange_rate.pdf Graphic file (type pdf)
 <use EURO_USD_exchange_rate.pdf>
-Package pdftex.def Info: EURO_USD_exchange_rate.pdf  used on input line 80. on 
-input line 80.
-Package pdftex.def Info: Requested size: 173.44492pt x 115.62994pt on input lin
-e 80.
+Package pdftex.def Info: EURO_USD_exchange_rate.pdf  used on input line 80.
+(pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -715,25 +712,21 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
  [2 <./EURO_USD_exchange_rate.pdf>] [3] [4]
-<Airline_Passengers.pdf, id=177, pagebox=cropbox, 433.62pt x 289.08pt>
+<Airline_Passengers.pdf, id=177, 433.62pt x 289.08pt>
 File: Airline_Passengers.pdf Graphic file (type pdf)
 <use Airline_Passengers.pdf>
-Package pdftex.def Info: Airline_Passengers.pdf  used on input line 205. on inp
-ut line 205.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 205.
+Package pdftex.def Info: Airline_Passengers.pdf  used on input line 205.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 205--206
  [][] 
  []
 
-<Sunspot.pdf, id=178, pagebox=cropbox, 433.62pt x 289.08pt>
+<Sunspot.pdf, id=178, 433.62pt x 289.08pt>
 File: Sunspot.pdf Graphic file (type pdf)
 <use Sunspot.pdf>
-Package pdftex.def Info: Sunspot.pdf  used on input line 211. on input line 211
-.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 211.
+Package pdftex.def Info: Sunspot.pdf  used on input line 211.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 211--212
  [][] 
@@ -741,26 +734,20 @@ Overfull \hbox (5.28534pt too wide) in paragraph at lines 211--212
 
 File: EURO_USD_exchange_rate.pdf Graphic file (type pdf)
 <use EURO_USD_exchange_rate.pdf>
-Package pdftex.def Info: EURO_USD_exchange_rate.pdf  used on input line 224. on
- input line 224.
-Package pdftex.def Info: Requested size: 173.44492pt x 115.62994pt on input lin
-e 224.
-<Neural_net_schematic_FFNN.pdf, id=194, pagebox=cropbox, 722.7pt x 406.51875pt>
-
+Package pdftex.def Info: EURO_USD_exchange_rate.pdf  used on input line 224.
+(pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
+<Neural_net_schematic_FFNN.pdf, id=194, 722.7pt x 406.51875pt>
 File: Neural_net_schematic_FFNN.pdf Graphic file (type pdf)
 <use Neural_net_schematic_FFNN.pdf>
 Package pdftex.def Info: Neural_net_schematic_FFNN.pdf  used on input line 246.
- on input line 246.
-Package pdftex.def Info: Requested size: 289.07487pt x 162.60461pt on input lin
-e 246.
-<Neural_net_schematic_LSTM.pdf, id=195, pagebox=cropbox, 722.7pt x 406.51875pt>
 
+(pdftex.def)             Requested size: 289.07487pt x 162.60461pt.
+<Neural_net_schematic_LSTM.pdf, id=195, 722.7pt x 406.51875pt>
 File: Neural_net_schematic_LSTM.pdf Graphic file (type pdf)
 <use Neural_net_schematic_LSTM.pdf>
 Package pdftex.def Info: Neural_net_schematic_LSTM.pdf  used on input line 255.
- on input line 255.
-Package pdftex.def Info: Requested size: 289.07487pt x 162.60461pt on input lin
-e 255.
+
+(pdftex.def)             Requested size: 289.07487pt x 162.60461pt.
 [5 <./Airline_Passengers.pdf> <./Sunspot.pdf
 
 pdfTeX warning: pdflatex (file ./Sunspot.pdf): PDF inclusion: multiple pdfs wit
@@ -770,39 +757,33 @@ h page group included in a single page
 pdfTeX warning: pdflatex (file ./Neural_net_schematic_LSTM.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >]
-<Airline_Passengers_Forecast.pdf, id=330, pagebox=cropbox, 433.62pt x 289.08pt>
-
+<Airline_Passengers_Forecast.pdf, id=330, 433.62pt x 289.08pt>
 File: Airline_Passengers_Forecast.pdf Graphic file (type pdf)
 <use Airline_Passengers_Forecast.pdf>
 Package pdftex.def Info: Airline_Passengers_Forecast.pdf  used on input line 27
-7. on input line 277.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 277.
+7.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 277--278
  [][] 
  []
 
-<Sunspot_Forecast.pdf, id=331, pagebox=cropbox, 433.62pt x 289.08pt>
+<Sunspot_Forecast.pdf, id=331, 433.62pt x 289.08pt>
 File: Sunspot_Forecast.pdf Graphic file (type pdf)
 <use Sunspot_Forecast.pdf>
-Package pdftex.def Info: Sunspot_Forecast.pdf  used on input line 283. on input
- line 283.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 283.
+Package pdftex.def Info: Sunspot_Forecast.pdf  used on input line 283.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
-<EURO_USD_exchange_rate_with_Forecast.pdf, id=334, pagebox=cropbox, 433.62pt x 
-289.08pt>
+<EURO_USD_exchange_rate_with_Forecast.pdf, id=334, 433.62pt x 289.08pt>
 File: EURO_USD_exchange_rate_with_Forecast.pdf Graphic file (type pdf)
 <use EURO_USD_exchange_rate_with_Forecast.pdf>
 Package pdftex.def Info: EURO_USD_exchange_rate_with_Forecast.pdf  used on inpu
-t line 294. on input line 294.
-Package pdftex.def Info: Requested size: 173.44492pt x 115.62994pt on input lin
-e 294.
+t line 294.
+(pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
 [7 <./Airline_Passengers_Forecast.pdf> <./Sunspot_Forecast.pdf
 
 pdfTeX warning: pdflatex (file ./Sunspot_Forecast.pdf): PDF inclusion: multiple
@@ -822,49 +803,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 556--557
  []
 
 [12]
-<Airline_Passengers_NN.pdf, id=626, pagebox=cropbox, 433.62pt x 289.08pt>
+<Airline_Passengers_NN.pdf, id=626, 433.62pt x 289.08pt>
 File: Airline_Passengers_NN.pdf Graphic file (type pdf)
 <use Airline_Passengers_NN.pdf>
-Package pdftex.def Info: Airline_Passengers_NN.pdf  used on input line 570. on 
-input line 570.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 570.
+Package pdftex.def Info: Airline_Passengers_NN.pdf  used on input line 570.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 570--571
  [][] 
  []
 
-<Airline_Passengers_LSTN.pdf, id=627, pagebox=cropbox, 433.62pt x 289.08pt>
+<Airline_Passengers_LSTN.pdf, id=627, 433.62pt x 289.08pt>
 File: Airline_Passengers_LSTN.pdf Graphic file (type pdf)
 <use Airline_Passengers_LSTN.pdf>
-Package pdftex.def Info: Airline_Passengers_LSTN.pdf  used on input line 576. o
-n input line 576.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 576.
+Package pdftex.def Info: Airline_Passengers_LSTN.pdf  used on input line 576.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 576--577
  [][] 
  []
 
-<Sunspot_Forecast_NN.pdf, id=629, pagebox=cropbox, 433.62pt x 289.08pt>
+<Sunspot_Forecast_NN.pdf, id=629, 433.62pt x 289.08pt>
 File: Sunspot_Forecast_NN.pdf Graphic file (type pdf)
 <use Sunspot_Forecast_NN.pdf>
-Package pdftex.def Info: Sunspot_Forecast_NN.pdf  used on input line 589. on in
-put line 589.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 589.
+Package pdftex.def Info: Sunspot_Forecast_NN.pdf  used on input line 589.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 589--590
  [][] 
  []
 
-<Sunspot_Forecast_LSTN.pdf, id=630, pagebox=cropbox, 433.62pt x 289.08pt>
+<Sunspot_Forecast_LSTN.pdf, id=630, 433.62pt x 289.08pt>
 File: Sunspot_Forecast_LSTN.pdf Graphic file (type pdf)
 <use Sunspot_Forecast_LSTN.pdf>
-Package pdftex.def Info: Sunspot_Forecast_LSTN.pdf  used on input line 595. on 
-input line 595.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 595.
+Package pdftex.def Info: Sunspot_Forecast_LSTN.pdf  used on input line 595.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 595--596
  [][] 
@@ -878,26 +851,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 pdfTeX warning: pdflatex (file ./Airline_Passengers_LSTN.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-<EURO_USD_exchange_rate_NN.pdf, id=718, pagebox=cropbox, 433.62pt x 289.08pt>
+<EURO_USD_exchange_rate_NN.pdf, id=718, 433.62pt x 289.08pt>
 File: EURO_USD_exchange_rate_NN.pdf Graphic file (type pdf)
 <use EURO_USD_exchange_rate_NN.pdf>
 Package pdftex.def Info: EURO_USD_exchange_rate_NN.pdf  used on input line 609.
- on input line 609.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 609.
+
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 609--610
  [][] 
  []
 
-<EURO_USD_exchange_rate_LSTN.pdf, id=719, pagebox=cropbox, 433.62pt x 289.08pt>
-
+<EURO_USD_exchange_rate_LSTN.pdf, id=719, 433.62pt x 289.08pt>
 File: EURO_USD_exchange_rate_LSTN.pdf Graphic file (type pdf)
 <use EURO_USD_exchange_rate_LSTN.pdf>
 Package pdftex.def Info: EURO_USD_exchange_rate_LSTN.pdf  used on input line 61
-5. on input line 615.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 615.
+5.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
 
 Overfull \hbox (5.28534pt too wide) in paragraph at lines 615--616
  [][] 
@@ -919,13 +889,11 @@ pdfTeX warning: pdflatex (file ./EURO_USD_exchange_rate_NN.pdf): PDF inclusion:
 pdfTeX warning: pdflatex (file ./EURO_USD_exchange_rate_LSTN.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >] [15]
-<Annual_Rainfall_NN_relu.pdf, id=888, pagebox=cropbox, 433.62pt x 289.08pt>
+<Annual_Rainfall_NN_relu.pdf, id=888, 433.62pt x 289.08pt>
 File: Annual_Rainfall_NN_relu.pdf Graphic file (type pdf)
 <use Annual_Rainfall_NN_relu.pdf>
-Package pdftex.def Info: Annual_Rainfall_NN_relu.pdf  used on input line 663. o
-n input line 663.
-Package pdftex.def Info: Requested size: 177.78534pt x 118.52356pt on input lin
-e 663.
+Package pdftex.def Info: Annual_Rainfall_NN_relu.pdf  used on input line 663.
+(pdftex.def)             Requested size: 177.78534pt x 118.52356pt.
  [16 <./Annual_Rainfall_NN_relu.pdf>] [17]
 Underfull \hbox (badness 5161) in paragraph at lines 715--718
 []\OT1/cmr/m/n/10 T. Mong and U. Ngan, Re-search Jour-nal of Fi-nance and Ac-
@@ -994,10 +962,10 @@ Package rerunfilecheck Info: File `project_report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 745.
  ) 
 Here is how much of TeX's memory you used:
- 9580 strings out of 492990
- 138987 string characters out of 6135004
- 268766 words of memory out of 5000000
- 12814 multiletter control sequences out of 15000+600000
+ 9583 strings out of 492982
+ 139042 string characters out of 6134895
+ 269122 words of memory out of 5000000
+ 12825 multiletter control sequences out of 15000+600000
  11799 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,11n,40p,1282b,1866s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1016,7 +984,7 @@ r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on project_report.pdf (19 pages, 1112726 bytes).
+Output written on project_report.pdf (19 pages, 1111780 bytes).
 PDF statistics:
  1062 PDF objects out of 1200 (max. 8388607)
  578 compressed objects within 6 object streams
